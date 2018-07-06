@@ -1,0 +1,20 @@
+Test1:
+    type: entity
+    table: test1
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        name:
+            type: text
+            nullable: false
+            length: null
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }
