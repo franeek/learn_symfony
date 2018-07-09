@@ -1,0 +1,47 @@
+Admin\Entity\FlatCustomer:
+    type: entity
+    table: flat_customer
+    indexes:
+        fki_person_to_flat:
+            columns:
+                - flat
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        name:
+            type: text
+            nullable: false
+            length: null
+            options:
+                fixed: false
+        surname:
+            type: text
+            nullable: false
+            length: null
+            options:
+                fixed: false
+        adress:
+            type: text
+            nullable: false
+            length: null
+            options:
+                fixed: false
+    manyToOne:
+        flat:
+            targetEntity: Flat
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                flat:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

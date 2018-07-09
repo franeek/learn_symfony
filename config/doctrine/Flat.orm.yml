@@ -1,0 +1,45 @@
+Admin\Entity\Flat:
+    type: entity
+    table: flat
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        roomno:
+            type: smallint
+            nullable: false
+            options:
+                unsigned: false
+            column: roomNo
+        area:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+        descrption:
+            type: text
+            nullable: true
+            length: null
+            options:
+                fixed: false
+                default: ''
+        slotno:
+            type: smallint
+            nullable: true
+            options:
+                unsigned: false
+            column: slotNo
+        adress:
+            type: text
+            nullable: false
+            length: null
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

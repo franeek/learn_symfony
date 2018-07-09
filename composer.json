@@ -12,7 +12,7 @@
         "symfony/apache-pack": "dev-master",
         "symfony/console": "^4.2",
         "symfony/flex": "^1.0",
-        "symfony/force-lowest": "=4.2",
+        "symfony/force-lowest": "v4.1",
         "symfony/framework-bundle": "^4.2",
         "symfony/security-bundle": "^4.2",
         "symfony/web-profiler-bundle": "^4.2",
@@ -21,7 +21,8 @@
     "require-dev": {
         "sonata-project/media-bundle": "^4.0@dev",
         "symfony/dotenv": "^4.2",
-        "symfony/maker-bundle": "^1.0@dev"
+        "symfony/maker-bundle": "^1.0@dev",
+        "symfony/web-server-bundle": "^4.2"
     },
     "config": {
         "preferred-install": {
