@@ -1,0 +1,15 @@
+fos_user: 
+    db_driver: orm
+    firewall_name: main
+    user_class: Sonata\UserBundle\Entity\BaseUser
+
+    group:
+        group_class: Sonata\UserBundle\Entity\BaseGroup
+        group_manager: sonata.user.orm.user_manager
+
+    service:
+        user_manager: sonata.user.orm.user_manager
+
+    from_email:
+        address: robert.franczuk@gmail.com
+        sender_name: robert.franczuk@gmail.com
