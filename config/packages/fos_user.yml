@@ -1,11 +1,13 @@
 fos_user: 
     db_driver: orm
     firewall_name: main
-    user_class: Sonata\UserBundle\Entity\BaseUser
+    #user_class: Sonata\UserBundle\Entity\BaseUser
+    user_class:     App\Application\Sonata\UserBundle\Entity\User
 
     group:
-        group_class: Sonata\UserBundle\Entity\BaseGroup
-        group_manager: sonata.user.orm.user_manager
+        group_class:   App\Application\Sonata\UserBundle\Entity\Group    
+        #group_class: Sonata\UserBundle\Entity\BaseGroup
+        #group_manager: sonata.user.orm.user_manager
 
     service:
         user_manager: sonata.user.orm.user_manager
