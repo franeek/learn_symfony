@@ -34,7 +34,7 @@ class Flat
      *
      * @ORM\Column(name="area", type="integer", nullable=false)
      */
-    private $area ;
+    private $area;
 
     /**
      * @var string|null
@@ -56,6 +56,13 @@ class Flat
      * @ORM\Column(name="adress", type="text", nullable=false)
      */
     private $adress;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="Name", type="text", nullable=true)
+     */
+    private $name;
 
     public function getId(): ?int
     {
@@ -118,6 +125,18 @@ class Flat
     public function setAdress(string $adress): self
     {
         $this->adress = $adress;
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(?string $name): self
+    {
+        $this->name = $name;
 
         return $this;
     }
