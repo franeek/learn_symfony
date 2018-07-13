@@ -52,7 +52,12 @@ class FlatCustomer
      * })
      */
     private $flat;
-
+    /**
+     * @var price
+     * 
+     * @ORM\Column(name="price", type="text", nullable=false)
+     */
+    private $price;
     public function getId(): ?int
     {
         return $this->id;
@@ -102,6 +107,18 @@ class FlatCustomer
     public function setFlat(?Flat $flat): self
     {
         $this->flat = $flat;
+
+        return $this;
+    }
+
+    public function getPrice(): ?string
+    {
+        return $this->price;
+    }
+
+    public function setPrice(string $price): self
+    {
+        $this->price = $price;
 
         return $this;
     }
