@@ -24,11 +24,21 @@ class FlatAdmin extends AbstractAdmin
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
-        $datagridMapper->add('description');
+         $datagridMapper->add('name');
+	 $datagridMapper->add('roomNo');
+	 $datagridMapper->add('area');
+	 $datagridMapper->add('description');
+	 $datagridMapper->add('adress');
+	 //$datagridMapper->add('slot_no');
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
-        $listMapper->addIdentifier('description');
+        $listMapper->add('name');
+	 $listMapper->add('roomNo');
+	 $listMapper->add('area');
+	 $listMapper->add('description');
+	 $listMapper->add('adress');
+	 $listMapper->add('slot_no');
     }
 }

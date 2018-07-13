@@ -60,7 +60,7 @@ class Flat
     /**
      * @var string|null
      *
-     * @ORM\Column(name="Name", type="text", nullable=true)
+     * @ORM\Column(name="name", type="text", nullable=true)
      */
     private $name;
 
@@ -140,6 +140,8 @@ class Flat
 
         return $this;
     }
-
+    public function __toString() : string {
+        return (string) $this->name;
+    }
 
 }
